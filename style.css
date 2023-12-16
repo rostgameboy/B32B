@@ -33,6 +33,7 @@ body{
 h3{
     display: none;
     width: 200px;
+    margin-bottom: 10px;
 }
 .code{
     display: flex;
@@ -58,6 +59,15 @@ h3{
     margin: auto;
     width: 400px;
     height: 300px;
+}
+.me{
+    display: none;
+    background: url(img/Me.jpg) no-repeat;
+    background-size: cover;
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+    height: 250px;
 }
 .secrets{
     display: none;
@@ -85,4 +95,23 @@ h3{
 }
 .display-none{
     display: none;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 500px){
+    .tip{
+        width: 50%;
+        height: 150px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    .secret{
+        width: 95%;
+        height: 250px;
+        margin: 0px;
+        margin-top: 40px;
+    }
+    .info-code{
+        margin-top: 50px;
+    }
 }
