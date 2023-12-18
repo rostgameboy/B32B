@@ -18,12 +18,12 @@ function button(){
         alert("OK, take your cat and now try to write B32B, but in ciphers of course");
         document.querySelector('.cat').classList.add('display-block');
         body.classList.add('correct');
-    }
+    }//CAT
     if (code == '2322'){
         document.querySelector('.s1').setAttribute('id', 's1');
         body.classList.add('correct');
         document.querySelector('h3').classList.remove('display-block');
-    }
+    }//B32B
     if (code == '18151920911'){
         alert("Yes, it's me, who just make this site with crazy idea because i get bored and you don't get my photo because i don't see any good photo with me... but you can get this picture for send this code");
         body.classList.add('correct');
@@ -40,6 +40,21 @@ function button(){
     if (code == '11820251513'){
         body.classList.add('correct');
         document.querySelector('.s4').setAttribute('id', 's4');
+    }
+    if (code == '11820513'){
+        body.classList.add('correct');
+        document.querySelector('.s5').setAttribute('id', 's5');
+    }
+    if (code == '215144114'){
+        body.classList.add('correct');
+        document.querySelector('.s6').setAttribute('id', 's6');
+    }
+    if (code == '10211920914'){
+        body.classList.add('correct');
+        document.querySelector('.s7').setAttribute('id', 's7');
+    }
+    if (code == '135135'){
+
     }
     if (code == 'LeiKei'){
         secrets.classList.add('display-flex');

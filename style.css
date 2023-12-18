@@ -8,11 +8,18 @@
     50% {background: #c1d493;}
     100% {background: #c9cebd;}
 }
+@keyframes achive{
+    50% {background: #bb93d4;}
+    100% {background: #c9cebd;}
+}
 body{
     background-color: #c9cebd;
 }
 .correct{
     animation: correct 1s linear;
+}
+.achive{
+    animation: achive 1s linear;
 }
 .tip{
     display: none;
