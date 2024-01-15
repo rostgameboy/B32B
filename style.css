@@ -5,12 +5,38 @@
     transition: 1s ease;
 }
 @keyframes correct{
-    50% {background: #c1d493;}
+    50% {background: #c3de86;}
     100% {background: #c9cebd;}
 }
 @keyframes achive{
     50% {background: #bb93d4;}
     100% {background: #c9cebd;}
+}
+@keyframes wrong{
+    50% {background: #b87c7c;}
+    100% {background: #c9cebd;}
+}
+@keyframes typing {
+    0% {
+        width: 0%; 
+        border-left: none;
+        border-right: 2px solid #000;
+    }
+    50%, 70%{
+        width: 100%;
+        border-left: none;
+        border-right: 2px solid #000;
+    }
+    99%{
+        width: 1%;
+        border-left: none;
+        border-right: 2px solid #000;
+    }
+    100% {
+        width: 0%;
+        border-left: 2px solid #000;
+        border-right: none;   
+    }
 }
 body{
     background-color: #c9cebd;
@@ -20,6 +46,20 @@ body{
 }
 .achive{
     animation: achive 1s linear;
+}
+.wrong{
+    animation: wrong 1s linear;
+}
+#answer {
+    height: 18px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-left: 2px solid #000;
+}
+.answer{
+    animation: typing 7s steps(15, end);
 }
 .tip{
     display: none;
