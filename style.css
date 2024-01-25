@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
-    transition: 1s ease;
 }
 @keyframes correct{
     50% {background: #c3de86;}
@@ -16,14 +15,14 @@
     50% {background: #b87c7c;}
     100% {background: #c9cebd;}
 }
-@keyframes typing1 {
-    0% {
+@keyframes typing1{
+    0%{
         width: 0%; 
         border-left: none;
         border-right: 2px solid #000;
     }
     30%, 60%{
-        width: 100%;
+        width: 68%;
         border-left: none;
         border-right: 2px solid #000;
     }
@@ -32,11 +31,39 @@
         border-left: none;
         border-right: 2px solid #000;
     }
-    100% {
+    100%{
         width: 0%;
         border-left: 2px solid #000;
         border-right: none;   
     }
+}
+@keyframes typing2{
+    0% {
+        transform: translate(400%, 0%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+      }
+}
+@keyframes typing3{
+    0% {
+        transform: translate(0%, -300%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+      }
+}
+@keyframes typing4{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes anim{
+    0% {border-left: none;}
+    100% {border-left: 2px solid #000;}
 }
 body{
     background-color: #c9cebd;
@@ -61,109 +88,151 @@ body{
 .answer{
     animation: typing1 4s steps(15, end);
 }
+.anim{
+    animation: anim 1s linear infinite;
+}
+.typing2{
+    animation: typing2 1s ease-out;
+}
+.typing3{
+    animation: typing3 2s ease-out;
+}
+.typing4{
+    animation: typing4 3s ease-in;
+}
 .tip{
     display: none;
-    width: 400px;
-    height: 400px;
-    background: url(img/alfabetcirkel.png) center no-repeat;
-    background-size: cover;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 60%;
+    height: 130px;
+    font-size: 30px;
     margin: auto;
+    margin-top: 50px;
     border-radius: 3px;
-    transition: 1s ease;
+    line-height: 40px;
 }
 .info-code{
     margin: auto;
     margin-top: 80px;
-    width: 100px;
+    width: 150px;
+}
+h2{
+    width: 60%;
 }
 h3{
     display: none;
     width: 200px;
     margin-bottom: 10px;
 }
+h4{
+    width: 25px;
+}
+h5{
+    opacity: 0;
+    position: relative;
+    top: -40%;
+    text-align: center;
+    width: 250px;
+}
 .code{
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 96px;
-    height: 30px;
+    width: 80%;
+    height: 35px;
     border: black solid 2px;
     border-radius: 6px;
+    font-size: 20px;
 }
 .Send{
     background: #006C67;
     border: none;
     border-radius: 4px;
     margin-top: 5px;
-    width: 70px;
-    height: 20px;
+    width: 60%;
+    height: 30px;
     cursor: pointer;
+    font-size: 15px;
+}
+.Achievs{
+    display: flex;
+    justify-content: space-evenly;
 }
 .cat{
     display: none;
+    justify-content: center;
     background: url(img/maxwell-cat.gif) center no-repeat;
-    margin: auto;
-    width: 400px;
-    height: 300px;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+}
+.cat:hover h5{
+    opacity: 1;
 }
 .me{
     display: none;
     background: url(img/Me.jpg) no-repeat;
     background-size: cover;
-    margin: auto;
     margin-top: 20px;
-    width: 200px;
-    height: 250px;
+    width: 170px;
+    height: 200px;
+}
+.me:hover h5{
+    top: -60%;
+    opacity: 1;
 }
 .secrets{
     display: none;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .secret{
     background: #bccd95 url(img/secret.png) center no-repeat;
     background-size: 150px 150px;
-    width: 650px;
+    width: 580px;
     height: 350px;
     border-radius: 4px;
-    margin: 20px;
-    margin-top: 80px;
+    margin: 30px 20px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 #s1{
     background: url(img/WeAreB32b.png) center;
     background-size: cover;
+    transition: 1s ease;
 }
 #s2{
     background: url(img/Yehor.jpg) center no-repeat;
     background-size: cover;
+    transition: 1s ease;
 }
 #s3{
     background: url(img/Emre.jpg);
     background-size: cover;
+    transition: 1s ease;
 }
 #s4{
     background: #bccd95 url(img/Artyom.png) center no-repeat;
     background-size: 250px 350px;
-}
-.display-block{
-    display: block;
-}
-.display-flex{
-    display: flex;
-}
-.display-none{
-    display: none;
+    transition: 1s ease;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 500px){
     .tip{
+        width: 90%;
+        height: 300px;
+        font-size: 13px;
+        flex-wrap: wrap;
+        line-height: 20px;
         margin-top: 5px;
-        width: 60%;
-        height: 200px;
     }
     h3{
         font-size: 15px;
+    }
+    h4{
+        width: 13px;
+        height: 60px;
+        margin: 2px 14px;
     }
     .secret{
         width: 95%;
@@ -176,5 +245,12 @@ h3{
     }
     #s4{
         background-size: 200px 250px;
+    }
+    #answer{
+        height: 18px;
+        font-size: 16px;
+    }
+    .code{
+        width: 105px;
     }
 }
